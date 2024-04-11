@@ -7,7 +7,7 @@ import {responsiveHeight} from 'react-native-responsive-dimensions';
 import Home from '../../screens/home/Home';
 import Brands from '../../screens/brands/Brands';
 import { COLORS } from '../../../assets/constants/theme';
-import { account_2, home, menu, settings } from '../../../assets/constants/constants';
+import { account, account_2, home, home_white, menu, menu_white, setting_white, settings } from '../../../assets/constants/constants';
 import Account from '../../screens/account/Account';
 const BottomNavigator = () => {
   const navigation = useNavigation();
@@ -26,12 +26,12 @@ const BottomNavigator = () => {
         showIcon: true,
         tabBarStyle: {
           height: responsiveHeight(8),
-          backgroundColor: COLORS.light,
+          backgroundColor: COLORS.primary,
           borderTopColor: COLORS.grey08,
           borderTopWidth: 1,
         },
       })}
-      activeColor="black"
+      activeColor="white"
       inactiveColor="white"
       barSyle={{backgroundColor: 'white'}}>
       <Bottom.Screen
@@ -44,7 +44,7 @@ const BottomNavigator = () => {
           headerShown: false,
           tabBarIcon: ({focused, color, size}) => (
             <Image
-            source={focused ? home : home}
+            source={focused ? home_white : home_white}
             style={focused ? styles.active : styles.inactive}
           />          ),
         }}
@@ -59,7 +59,7 @@ const BottomNavigator = () => {
           headerShown: false,
           tabBarIcon: ({focused, color, size}) => (
             <Image
-            source={focused ? menu : menu}
+            source={focused ? menu_white : menu_white}
             style={focused ? styles.active : styles.inactive}
           />          ),
         }}
@@ -75,7 +75,7 @@ const BottomNavigator = () => {
           headerShown: false,
           tabBarIcon: ({focused, color, size}) => (
             <Image
-            source={focused ? settings : settings}
+            source={focused ? setting_white : setting_white}
             style={focused ? styles.active : styles.inactive}
           />
           ),
@@ -92,7 +92,7 @@ const BottomNavigator = () => {
           headerShown: false,
           tabBarIcon: ({focused, color, size}) => (
             <Image
-            source={focused ? account_2 : account_2}
+            source={focused ? account : account}
             style={focused ? styles.active : styles.inactive}
           />          ),
         }}
